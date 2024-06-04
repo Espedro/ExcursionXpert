@@ -30,11 +30,16 @@ function PlaceList() {
       {places ? (
         places.map((place) => (
           <div>
-            <Link to={"/places/" + place.id}></Link>
-            <h2>{place.nameOfPlace}</h2>
-            <p>{place.bestSeasonToGo}</p>
-            <p>{place.city}</p>
-            <p>{place.country}</p>
+            <Link to={"/places/" + place.id}>
+              <img src="https://www.gohawaii.com/sites/default/files/styles/image_gallery_bg_xl/public/hero-unit-images/10759.jpg?itok=RVKya-L8" alt="" style={{width : "40vw", height: "30vh", objectFit: "contain"}} />
+              <h2>{place.nameOfPlace}</h2>
+              <p>Country: {place.country}</p>
+              <p>City: {place.city}</p>
+              <p>Based: {place.based}</p>
+              <p>Best season to go: {place.bestSeasonToGo}</p>
+             
+              
+            </Link>
           </div>
         ))
       ) : (
