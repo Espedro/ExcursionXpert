@@ -1,10 +1,19 @@
 import PlaceList from "../components/PlaceList"
 
+import CarouselHero from "../components/CarouselHero"
+
 function Places() {
   return( 
-  <div>
-    <h1> Places list </h1>
+  <div className="container">
+
+<div> <CarouselHero /> </div>
+
+<br />
+
+
+    <div>
     <PlaceList />
+    </div>
   </div>
 )
 }

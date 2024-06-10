@@ -10,11 +10,11 @@ import PlaceDetails from "./pages/PlaceDetails"
 import Places from "./pages/Places"
 import CreatePlace from "./pages/AddPlace"
 import AddPlace from "./pages/AddPlace"
+import EditPlace from "./pages/EditPlace"
 
 function App() {
   return (
     <>
-      
       <Navbar />
 
       <Routes>
@@ -24,7 +24,7 @@ function App() {
         <Route path="/places/:placeID" element={<PlaceDetails />} />
         <Route path="/places" element={<Places />} />
         <Route path="/addplace" element={<AddPlace />} />
-        
+        <Route path="/editplace/:placeID" element={<EditPlace />} />
       </Routes>
     </>
   )

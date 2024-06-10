@@ -39,15 +39,25 @@ function PlaceDetails() {
   }
 
   return (
-    <div>
+    <div className="container">
       <>
+      <br />
+      <br />
+      
         {place ? (
-          <div>
+          <div className="col-12">
+            <center>
             <img
-              src="https://www.gohawaii.com/sites/default/files/styles/image_gallery_bg_xl/public/hero-unit-images/10759.jpg?itok=RVKya-L8"
+              src={place.image ||
+                "https://www.gohawaii.com/sites/default/files/styles/image_gallery_bg_xl/public/hero-unit-images/10759.jpg?itok=RVKya-L8"}
               alt=""
-              style={{ width: "40vw", height: "30vh", objectFit: "contain" }}
+              className="img-fluid"
+             
             />
+
+</center>
+            <br />
+            <center>
             <h1> {place.nameOfPlace}</h1>
 
             <p>
@@ -61,9 +71,20 @@ function PlaceDetails() {
             </p>
             <p> {place.description} </p>
 
-            <button>Edit</button>
+            </center>
 
-            <button onClick={handleDelete} style={{ margin: "10px" }}>
+            <div className="row">
+            
+            <div className="col-6">
+
+            <Link to={`/editplace/${placeID}`}>
+              <button type="button" className="btn btn-secondary button"> Edit </button>
+            </Link>
+            </div>
+
+
+            <div className="col-6">
+            <button onClick={handleDelete}  type="button" className="btn btn-secondary button1">
               Delete{" "}
               <img
                 src="https://cdn1.iconfinder.com/data/icons/hawcons/32/699013-icon-27-trash-can-512.png"
@@ -71,6 +92,10 @@ function PlaceDetails() {
                 style={{ width: "15px", height: "15px", cursor: "pointer" }}
               />
             </button>
+            </div>
+
+            </div>
+
           </div>
         ) : (
           <p>Loading</p>
