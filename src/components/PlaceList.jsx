@@ -31,13 +31,10 @@ function PlaceList() {
         places.map((place) => (
           <div className="col-lg-3" >
             <Link to={"/places/" + place.id} className="link">
-              <div>
-                <div className="card">
+              <div className=" cardd">
+                <div className="card ">
                   <img
-                    src={
-                      place.image ||
-                      "https://www.gohawaii.com/sites/default/files/styles/image_gallery_bg_xl/public/hero-unit-images/10759.jpg?itok=RVKya-L8"
-                    }
+                    src={place.image}
                     alt=""
                     className="card-img-top img"
                   />

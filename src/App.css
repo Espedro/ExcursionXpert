@@ -68,7 +68,7 @@ color: #ffffff !important;
 
 .slide {
 
-  width: 100%;
+  
   height: 70vh !important;
 
 
@@ -95,3 +95,18 @@ box-shadow: none;
 
 
 }
+
+.cardd {
+
+  transition: all 0.03s !important;
+
+}
+
+
+.cardd :hover {
+  transform: scale(1.02);
+  
+
+}
+
+
